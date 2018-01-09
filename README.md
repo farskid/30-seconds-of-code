@@ -520,6 +520,9 @@ const chunk = (arr, size) =>
     arr.slice(i * size, i * size + size)
   );
 ```
+```js
+const chunk = (arr, size) => size < 0 ? [] : [arr.slice(0, size)].concat(chunk(arr.slice(size), size));
+```
 
 <details>
 <summary>Examples</summary>
